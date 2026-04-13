@@ -22,29 +22,29 @@ This project mirrors a production analytics engineering workflow in the Property
 Raw CSV Files (Kaggle / NAIC / Census)
         │
         ▼  Python ingestion scripts
-┌─────────────────────────┐
-│   Snowflake Raw Schema  │  ← Landing zone (untransformed source data)
-└─────────────────────────┘
+┌────────────────────────┐
+│  Snowflake Raw Schema  │  ← Landing zone (untransformed source data)
+└────────────────────────┘
         │
         ▼  dbt staging models
-┌──────────────────────────────┐
-│  Snowflake Staging Schema    │  ← Cleaned, renamed, typed source data
-└──────────────────────────────┘
+┌────────────────────────────┐
+│  Snowflake Staging Schema  │  ← Cleaned, renamed, typed source data
+└────────────────────────────┘
         │
         ▼  dbt intermediate models
-┌─────────────────────────────────────┐
-│  Snowflake Intermediate Schema      │  ← Business logic, joins, enrichment
-└─────────────────────────────────────┘
+┌─────────────────────────────────┐
+│  Snowflake Intermediate Schema  │  ← Business logic, joins, enrichment
+└─────────────────────────────────┘
         │
         ▼  dbt mart models
-┌──────────────────────────────┐
-│  Snowflake Mart Schema       │  ← Reporting-ready analytical assets
-└──────────────────────────────┘
+┌─────────────────────────┐
+│  Snowflake Mart Schema  │  ← Reporting-ready analytical assets
+└─────────────────────────┘
         │
         ▼
-┌──────────────────────────────┐
-│  Power BI Dashboards         │  ← Claims Performance · Financial Performance
-└──────────────────────────────┘
+┌───────────────────────┐
+│  Power BI Dashboards  │  ← Claims Performance · Financial Performance
+└───────────────────────┘
 ```
  
 ---
