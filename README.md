@@ -1,10 +1,10 @@
-# P&C Analytics Pipeline
+## P&C Analytics Pipeline
  
 An end-to-end insurance data warehouse built with **dbt Core**, **Snowflake**, and **Python** — modeling Property & Casualty claims and financial performance data from raw ingestion through a full analytical layer to Power BI dashboards.
  
 ---
  
-## Overview
+### Overview
  
 This project mirrors a production analytics engineering workflow in the Property & Casualty insurance industry. Starting from raw public datasets, it builds a fully modeled, tested, and documented data warehouse with a reporting layer designed for business decision-making.
  
@@ -16,7 +16,7 @@ This project mirrors a production analytics engineering workflow in the Property
  
 ---
  
-## Architecture
+### Architecture
  
 ```
 Raw CSV Files (Kaggle / NAIC / Census)
@@ -49,7 +49,7 @@ Raw CSV Files (Kaggle / NAIC / Census)
  
 ---
  
-## Tech Stack
+### Tech Stack
  
 | Tool | Purpose |
 |---|---|
@@ -62,7 +62,7 @@ Raw CSV Files (Kaggle / NAIC / Census)
  
 ---
  
-## Data Sources
+### Data Sources
  
 | Dataset | Source | Description |
 |---|---|---|
@@ -72,7 +72,7 @@ Raw CSV Files (Kaggle / NAIC / Census)
  
 ---
  
-## Project Structure
+### Project Structure
  
 ```
 pc-analytics-pipeline/
@@ -120,9 +120,9 @@ pc-analytics-pipeline/
  
 ---
  
-## Data Models
+### Data Models
  
-### Staging Layer
+#### Staging Layer
 Cleans and standardizes raw source data. One staging model per source.
  
 | Model | Description |
@@ -131,7 +131,7 @@ Cleans and standardizes raw source data. One staging model per source.
 | `stg_financials` | Cleaned financial data — premiums, losses, expenses by period |
 | `stg_geography` | ZIP code reference — state, region, lat/lon |
  
-### Intermediate Layer
+#### Intermediate Layer
 Applies business logic and joins across sources.
  
 | Model | Description |
@@ -139,7 +139,7 @@ Applies business logic and joins across sources.
 | `int_claims_enriched` | Claims joined to geography for regional analysis |
 | `int_financials_by_period` | Financial metrics aggregated and structured by reporting period |
  
-### Mart Layer
+#### Mart Layer
 Reporting-ready analytical assets consumed directly by Power BI.
  
 | Model | Description |
@@ -150,16 +150,16 @@ Reporting-ready analytical assets consumed directly by Power BI.
  
 ---
  
-## Dashboards
+### Dashboards
  
-### Claims Performance
+#### Claims Performance
 - Claim volume over time
 - Average claim cost by region and coverage type
 - Loss ratio trend
  
 *(Screenshot coming soon)*
  
-### Financial Performance
+#### Financial Performance
 - Premium vs. losses vs. expenses
 - Combined ratio trend by period
 - Geographic profitability view
@@ -168,15 +168,15 @@ Reporting-ready analytical assets consumed directly by Power BI.
  
 ---
  
-## How to Run This Project
+### How to Run This Project
  
-### Prerequisites
+#### Prerequisites
 - Python 3.11+
 - Snowflake account (free trial available at [snowflake.com](https://www.snowflake.com))
 - dbt Core installed (`pip install dbt-snowflake`)
 - VS Code or any code editor
  
-### Setup
+#### Setup
  
 **1. Clone the repo**
 ```bash
@@ -230,7 +230,7 @@ dbt docs serve
  
 ---
  
-## About
+### About
  
 Built by **Paige Ledbetter**, Senior Data Analyst & Analytics Engineer with 10+ years of experience in insurance data and analytics.
  
